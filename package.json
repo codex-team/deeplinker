@@ -1,6 +1,6 @@
 {
   "name": "@codexteam/deeplinker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny script that helps you upgrade links to open apps directly if it is possible",
   "keywords": ["deeplink", "scheme", "protocol"],
   "main": "dist/deeplinker.js",
