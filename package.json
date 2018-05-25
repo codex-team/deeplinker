@@ -1,5 +1,5 @@
 {
-  "name": "deeplinker",
+  "name": "@codexteam/deeplinker",
   "version": "1.0.0",
   "description": "Tiny script that helps you upgrade links to open apps directly if it is possible",
   "keywords": ["deeplink", "scheme", "protocol"],
@@ -11,7 +11,7 @@
     "name" : "Taly Guryn",
     "url" : "https://github.com/talyguryn"
   },
-  "homepage": "https://github.com/talyguryn/deeplinker",
+  "homepage": "https://github.com/codex-team/deeplinker",
   "license": "MIT",
   "devDependencies": {
     "webpack": "^4.7.0",

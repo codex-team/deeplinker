@@ -10,20 +10,20 @@ You can install script via package managers or download it to your server.
 
 ### NPM and Yarn
 
-Install package.
+Install package
 
 ```shell
-npm install --save deeplinker
+npm install @codexteam/deeplinker --save 
 ```
 
 ```shell
-yarn add deeplinker
+yarn add @codexteam/deeplinker
 ```
 
-Then require `deeplinking` module.
+Then require `deeplinker` module
 
 ```js
-const deeplinking = require('deeplinking');
+const deeplinker = require('@codexteam/deeplinker');
 ``` 
 
 ### Local script
