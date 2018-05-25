@@ -1,19 +1,26 @@
 {
   "name": "@codexteam/deeplinker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tiny script that helps you upgrade links to open apps directly if it is possible",
-  "keywords": ["deeplink", "scheme", "protocol"],
+  "keywords": [
+    "deeplink",
+    "scheme",
+    "protocol"
+  ],
   "main": "dist/deeplinker.js",
   "scripts": {
     "build": "webpack -o dist/deeplinker.js --verbose --mode production --output-library deeplinker --output-library-target umd"
   },
   "author": {
-    "name" : "Taly Guryn",
-    "url" : "https://github.com/talyguryn"
+    "name": "Taly Guryn",
+    "url": "https://github.com/talyguryn"
   },
   "homepage": "https://github.com/codex-team/deeplinker",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
     "webpack": "^4.7.0",
     "webpack-cli": "^2.1.2"
   }
