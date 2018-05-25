@@ -1,11 +1,11 @@
 {
   "name": "@codexteam/deeplinker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tiny script that helps you upgrade links to open apps directly if it is possible",
   "keywords": ["deeplink", "scheme", "protocol"],
   "main": "dist/deeplinker.js",
   "scripts": {
-    "build": "webpack -o dist/deeplinker.js --verbose --mode production --output-library deeplinker"
+    "build": "webpack -o dist/deeplinker.js --verbose --mode production --output-library deeplinker --output-library-target umd"
   },
   "author": {
     "name" : "Taly Guryn",
