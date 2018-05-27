@@ -1,8 +1,8 @@
 # Deeplinker
 
-Tiny script that helps you upgrade links to open apps directly if it is possible.
+This module helps you to create links to open pages in apps directly if it is possible. Otherwise web page will be opened.
 
-You can use deeplinking system to open apps by links with custom schemes. [Instagram's deeplinks docs](https://www.instagram.com/developer/mobile-sharing/iphone-hooks/) as an example. 
+![](assets/open-telegram-demo.png)
 
 ## Install
 
@@ -36,9 +36,13 @@ Download [dist/deeplinker.js](dist/deeplinker.js) file to your server and add it
 
 ## Usage
 
+Let's imagine that you want to create a link that opens some page in application, if it is installed. If target application is missing then link should open a web page as a normal link.
+
+Check out example schemas below.
+
 ### On click
 
-Call `deeplinker.click(element)` function. Element should contains the following params:
+Call `deeplinker.click(element)` function. Element should contain the following params:
 
 - `data-link` or `href` with a usual link
 - `data-app-link` with a deep link (with custom protocol) to an application
@@ -61,7 +65,7 @@ Or add listener to any element. Set up `data-link` and `data-app-link` params.
 
 ### Run automatically
 
-If you want to try open app silently then call `deeplinker.tryToOpenApp(deepLink)`.
+If you want to try to open app silently then call `deeplinker.tryToOpenApp(deepLink)`.
 
 Could be useful for redirection or invitation pages.
 
@@ -70,6 +74,42 @@ Could be useful for redirection or invitation pages.
 ```html
 <body onload="deeplinker.tryToOpenApp('tg://user?username=codex_team')">
 ```
+
+## Schemas of popular apps 
+
+### Telegram
+
+```
+tg://resolve?domain=[username]
+```
+
+### Twitter
+
+```
+twitter://user?screen_name=[username]
+```
+
+### Instagram
+
+```
+instagram://user?username=[username]
+```
+
+### Facebook
+
+```
+fb://profile/[id]
+```
+
+### VK
+
+```
+vk://vk.com/[id]
+```
+
+## Issues and improvements
+
+Feel free to ask a question or improve this project.
 
 ## License
 

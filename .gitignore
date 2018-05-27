@@ -65,3 +65,4 @@ typings/
 
 # Lock file
 package-lock.json
+.DS_Store
