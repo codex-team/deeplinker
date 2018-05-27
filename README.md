@@ -2,7 +2,7 @@
 
 This module helps you to create links to open pages in apps directly if it is possible. Otherwise web page will be opened.
 
-![](assets/open-telegram-demo.png)
+![](https://capella.pics/e001872a-2203-48cf-9a1f-b1a7cf66b8cd)
 
 ## Install
 
@@ -38,7 +38,7 @@ Download [dist/deeplinker.js](dist/deeplinker.js) file to your server and add it
 
 Let's imagine that you want to create a link that opens some page in application, if it is installed. If target application is missing then link should open a web page as a normal link.
 
-Check out example schemas below.
+Check out example schemes below.
 
 ### On click
 
@@ -75,7 +75,7 @@ Could be useful for redirection or invitation pages.
 <body onload="deeplinker.tryToOpenApp('tg://user?username=codex_team')">
 ```
 
-## Schemas of popular apps 
+## Schemes of popular apps 
 
 ### Telegram
 
