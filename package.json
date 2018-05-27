@@ -1,6 +1,6 @@
 {
   "name": "@codexteam/deeplinker",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Tiny script that helps you to use one link to open web pages or installed apps",
   "keywords": [
     "deeplink",

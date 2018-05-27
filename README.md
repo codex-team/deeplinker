@@ -1,6 +1,6 @@
 # Deeplinker
 
-This module helps you to create links to open pages in apps directly if it is possible. Otherwise web page will be opened.
+This module helps you to create web-links for opening native applications directly if it is possible. Otherwise web page will be opened.
 
 ![](https://capella.pics/e001872a-2203-48cf-9a1f-b1a7cf66b8cd)
 
