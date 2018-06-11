@@ -69,7 +69,7 @@ If you want to try to open app silently then call `deeplinker.tryToOpenApp(deepL
 
 Could be useful for redirection or invitation pages.
 
-> Doesn't works on mobile devices.
+> Doesn't work on mobile devices.
 
 ```html
 <body onload="deeplinker.tryToOpenApp('tg://user?username=codex_team')">
