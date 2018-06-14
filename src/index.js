@@ -8,6 +8,28 @@ const Deeplinker = (() => {
   /**
    * @public
    *
+   * @description Add listeners for deeplinker elements
+   *
+   * @param {string} selector - find elements by target selector
+   */
+  const init = (selector = '.deeplinker') => {
+    let links = document.querySelectorAll(selector);
+
+    if (!links) {
+      return;
+    }
+
+    links.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        click(link);
+      });
+    });
+  };
+
+  /**
+   * @public
+   *
    * @description Wrapper for openAppOrLink for clickable elements as div buttons
    *
    * @example for non-link elements: add click listener, add data-link and data-app-link params
@@ -164,6 +186,7 @@ const Deeplinker = (() => {
    */
   return {
     click,
+    init,
     tryToOpenApp
   }
 });

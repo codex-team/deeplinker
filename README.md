@@ -6,14 +6,14 @@ This module helps you to create web-links for opening native applications direct
 
 ## Install
 
-You can install script via package managers or download it to your server. 
+You can install script via package managers or download it to your server.
 
 ### NPM and Yarn
 
 Install package
 
 ```shell
-npm install @codexteam/deeplinker --save 
+npm install @codexteam/deeplinker --save
 ```
 
 ```shell
@@ -24,7 +24,7 @@ Then require `deeplinker` module
 
 ```js
 const deeplinker = require('@codexteam/deeplinker');
-``` 
+```
 
 ### Local script
 
@@ -42,20 +42,68 @@ Check out example schemes below.
 
 ### On click
 
-Call `deeplinker.click(element)` function. Element should contain the following params:
+Firstly you need to add the following params to deeplinker elements:
 
 - `data-link` or `href` with a usual link
 - `data-app-link` with a deep link (with custom protocol) to an application
 
-Upgrade your link element by adding a listener with preventing default action. Set up `data-app-link` param.
+Set up `data-app-link` param for links with `href`.
 
 ```html
-<a href="https://www.instagram.com/codex_team/"
-   onclick="event.preventDefault(); deeplinker.click(this)"
-   data-app-link="instagram://user?username=codex_team">Follow us on Instagram</a>
+<a href="https://www.instagram.com/codex_team/" data-app-link="instagram://user?username=codex_team">
+  Follow us on Instagram
+</a>
 ```
 
-Or add listener to any element. Set up `data-link` and `data-app-link` params.
+Or set up `data-link` and `data-app-link` params for any other elements
+
+```html
+<div data-link="https://t.me/codex_team" data-app-link="tg://resolve?domain=codex_team">
+  Join our Telegram-channel
+</div>
+```
+
+Then you need to add click listeners. There are two ways to do this.
+
+#### Add listeners automatically
+
+Add target class name to all deeplinker elements (`deeplinker` by default). Use `deeplinker.init()` function to add listeners automatically to all elements with target class name. `event.preventDefault` and `deeplinker.click` will be added as onclick function.
+
+Run this function when page is loaded.
+
+```html
+<body onload='deeplinker.init()'>
+```
+
+```html
+<div class="deeplinker" data-link="https://t.me/codex_team" data-app-link="tg://resolve?domain=codex_team">
+  Join our Telegram-channel
+</div>
+```
+
+##### Custom selector
+
+You can call `deeplinker.init()` with string param to set up target selector. `.deeplinker` by default.
+
+Example:
+
+```js
+deeplinker.init('.my_deeplinker_element');
+```
+
+for
+
+```html
+<div class="my_deeplinker_element" ...>
+  Join our Telegram-channel
+</div>
+```
+
+#### Set up onclick functions by yourself
+
+Call `deeplinker.click(element)` function on click.
+
+Set up click function on deeplinker elements.
 
 ```html
 <div onclick="deeplinker.click(this)"
@@ -63,19 +111,28 @@ Or add listener to any element. Set up `data-link` and `data-app-link` params.
      data-app-link="tg://resolve?domain=codex_team">Join our Telegram-channel</div>
 ```
 
-### Run automatically
+For link elements you also need to add `event.preventDefault` function:
+
+```html
+<a href="https://www.instagram.com/codex_team/"
+   onclick="event.preventDefault(); deeplinker.click(this)"
+   data-app-link="instagram://user?username=codex_team">Follow us on Instagram</a>
+```
+
+
+### Try to open app automatically
 
 If you want to try to open app silently then call `deeplinker.tryToOpenApp(deepLink)`.
 
 Could be useful for redirection or invitation pages.
 
-> Doesn't works on mobile devices.
+> Doesn't work on mobile devices.
 
 ```html
 <body onload="deeplinker.tryToOpenApp('tg://user?username=codex_team')">
 ```
 
-## Schemes of popular apps 
+## Schemes of popular apps
 
 ### Telegram
 
