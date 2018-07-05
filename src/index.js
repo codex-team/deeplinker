@@ -15,11 +15,11 @@ const Deeplinker = (() => {
   const init = (selector = '.deeplinker') => {
     let links = document.querySelectorAll(selector);
 
-    if (!links) {
+    if (!links.length) {
       return;
     }
 
-    links.forEach(link => {
+    Array.prototype.slice.call(links).forEach(link => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
         click(link);
