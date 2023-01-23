@@ -2,7 +2,7 @@
 
 This module helps you to create web-links for opening native applications directly if it is possible. Otherwise web page will be opened.
 
-![](./e001872a-2203-48cf-9a1f-b1a7cf66b8cd.jpeg)
+![](./demo.jpeg)
 
 ## Install
 
